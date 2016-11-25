@@ -1,0 +1,4 @@
+include ckip/*
+include LICENSE
+include test.py
+include setup.py
