@@ -58,14 +58,14 @@ class CKIP(object):
         text_node = ET.SubElement(root, 'text')
         text_node.text = text
 
-        request = ET.tostring(root, encoding='big5')
+        request = ET.tostring(root, encoding='cp950')
 
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         s.connect(self._server_addr)
         s.send(request)
         response = s.recv(len(text) * 10 + _BUFSIZE)
 
-        response = response.decode('big5').encode('utf8')
+        response = response.decode('cp950').encode('utf8')
         root = ET.fromstring(response)
 
         status = root.find('./processstatus')
