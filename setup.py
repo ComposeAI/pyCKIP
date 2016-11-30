@@ -4,7 +4,7 @@ from distutils.core import setup
 
 setup(
         name = 'ckip',
-        version = '0.1.1',
+        version = '0.1.2',
         description = 'CKIP chinese text segmentation Python API client ',
         author = 'Wei-Ning Huang',
         author_email = 'aitjcize@compose.ai',
